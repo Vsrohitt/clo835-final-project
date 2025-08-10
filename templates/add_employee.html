@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Add New Employee</h2>
+  <form method="POST" style="max-width:420px">
+    <label for="name">Name</label><input id="name" name="name" required>
+    <label for="position">Position</label><input id="position" name="position" required>
+    <label for="department">Department</label><input id="department" name="department" required>
+    <div style="margin-top:12px"><button type="submit">Add Employee</button></div>
+  </form>
+{% endblock %}

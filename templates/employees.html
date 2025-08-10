@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Employee List</h2>
+  {% if employees %}
+  <table>
+    <thead><tr><th>ID</th><th>Name</th><th>Position</th><th>Department</th></tr></thead>
+    <tbody>
+      {% for e in employees %}
+      <tr><td>{{ e[0] }}</td><td>{{ e[1] }}</td><td>{{ e[2] }}</td><td>{{ e[3] }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p>No employees yet. <a class="btn" href="{{ url_for('add_employee') }}">Add one</a></p>
+  {% endif %}
+{% endblock %}
